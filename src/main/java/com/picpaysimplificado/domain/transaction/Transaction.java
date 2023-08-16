@@ -15,6 +15,7 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity(name = "transactions")
@@ -22,6 +23,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 @EqualsAndHashCode(of = "id")
 public class Transaction {
   @Id
@@ -38,5 +40,11 @@ public class Transaction {
   private User sender;
 
   private LocalDateTime timestmap;
+
+  public void setReceiver(com.picpaysimplificado.domain.user.User receiver2) {
+  }
+
+  public void setSender(com.picpaysimplificado.domain.user.User sender2) {
+  }
 
 }
